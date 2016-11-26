@@ -1,7 +1,5 @@
 package com.maxml.exadvancedviews.listview;
 
-import java.util.List;
-
 import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -13,6 +11,8 @@ import android.widget.TextView;
 
 import com.maxml.exadvancedviews.R;
 import com.maxml.exadvancedviews.entity.ModelObject;
+
+import java.util.List;
 
 public class CustomAdapter extends ArrayAdapter<ModelObject> {
 
@@ -59,5 +59,4 @@ public class CustomAdapter extends ArrayAdapter<ModelObject> {
 		TextView txtTitle;
 		TextView txtDesc;
 	}
-
 }

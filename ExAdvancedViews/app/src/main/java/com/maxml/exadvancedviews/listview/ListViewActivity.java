@@ -1,7 +1,5 @@
 package com.maxml.exadvancedviews.listview;
 
-import java.util.ArrayList;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,11 +11,12 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.maxml.exadvancedviews.R;
 import com.maxml.exadvancedviews.entity.ModelObject;
 import com.maxml.exadvancedviews.expandable.ExpActivity;
+
+import java.util.ArrayList;
 
 public class ListViewActivity extends ActionBarActivity {
 
@@ -38,16 +37,16 @@ public class ListViewActivity extends ActionBarActivity {
         setContentView(R.layout.activity_listview);
 
         final ListView lView = (ListView) findViewById(R.id.listView1);
-        viewContainer = findViewById(R.id.undobar);
-        viewContainer.setOnClickListener(new OnClickListener() {
-
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(ListViewActivity.this, "Deletion undone",
-                        Toast.LENGTH_LONG).show();
-                viewContainer.setVisibility(View.GONE);
-            }
-        });
+//        viewContainer = findViewById(R.id.undobar);
+//        viewContainer.setOnClickListener(new OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v) {
+//                Toast.makeText(ListViewActivity.this, "Deletion undone",
+//                        Toast.LENGTH_LONG).show();
+//                viewContainer.setVisibility(View.GONE);
+//            }
+//        });
 
         final ArrayList<ModelObject> models = new ArrayList<ModelObject>();
         for (int i = 0; i < titles.length; i++) {
@@ -57,15 +56,15 @@ public class ListViewActivity extends ActionBarActivity {
         }
 
         //choices
-        adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, titles);
+//        adapter = new ArrayAdapter<ModelObject>(this,
+//                android.R.layout.simple_list_item_1, models);
 
         adapter = new CustomAdapter(this, R.layout.ex_list_item, models);
 
-        lView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
-        adapter = ArrayAdapter.createFromResource(this,
-                R.array.testArray,
-                android.R.layout.simple_list_item_multiple_choice);
+//        lView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
+//        adapter = ArrayAdapter.createFromResource(this,
+//                R.array.testArray,
+//                android.R.layout.simple_list_item_multiple_choice);
         //end choices
 
         lView.setAdapter(adapter);
