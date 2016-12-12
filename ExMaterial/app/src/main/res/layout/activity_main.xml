@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/lib/com.app.chasebank"
+    xmlns:app2="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.maxml.exmaterial.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_main" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+    <!--<ImageView-->
+    <!--android:id="@+id/image_shot"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"-->
+    <!--app:layout_constraintEnd_toEndOf="@+id/constraintLayout"-->
+    <!--app:layout_constraintStart_toStartOf="@+id/constraintLayout"-->
+    <!--app:layout_constraintTop_toTopOf="@+id/constraintLayout" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/text_title"-->
+    <!--android:layout_width="60dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"-->
+    <!--app:layout_constraintEnd_toStartOf="@+id/imageView"-->
+    <!--app:layout_constraintStart_toStartOf="@+id/constraintLayout"-->
+    <!--tools:text="Japan" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/text_like_count"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"-->
+    <!--app:layout_constraintEnd_toEndOf="@+id/constraintLayout"-->
+    <!--tools:text="1,287" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/imageView"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:src="@mipmap/ic_launcher"-->
+    <!--app:layout_constraintBottom_toBottomOf="@+id/text_like_count"-->
+    <!--app:layout_constraintEnd_toStartOf="@+id/text_like_count"-->
+    <!--app:layout_constraintTop_toTopOf="@+id/text_like_count" />-->
+
+    <!--<View-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="238dp"-->
+    <!--android:background="#000"-->
+    <!--app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"-->
+    <!--app:layout_constraintEnd_toEndOf="@+id/constraintLayout"-->
+    <!--app:layout_constraintStart_toStartOf="@+id/constraintLayout" />-->
+
+</android.support.design.widget.CoordinatorLayout>
